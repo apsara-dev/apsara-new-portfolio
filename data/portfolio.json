@@ -1,0 +1,320 @@
+{
+  "meta": {
+    "lastSyncedAt": "2026-11-22T19:48:00.000Z",
+    "syncSource": "json+sqlite",
+    "version": 4
+  },
+  "profile": {
+    "name": "Apsara R",
+    "title": "Software Engineer — Python Full Stack",
+    "specialization": "Python • Django REST Framework • PostgreSQL & MySQL • React.js",
+    "tagline": "Building reliable, scalable, and security-first web applications with clean REST architectures and relational databases.",
+    "positioning": "Computer Science & Engineering graduate (B.Tech, 2025) with hands-on industry experience building full-stack web systems using Python, Django REST Framework, React.js, and relational databases (PostgreSQL, MySQL).",
+    "telemetry": [
+      {
+        "value": "Python & DRF",
+        "label": "Backend Engineering",
+        "detail": "REST APIs, JWT Auth & ORM Design"
+      },
+      {
+        "value": "React & Next.js",
+        "label": "Frontend Systems",
+        "detail": "Responsive UI, TypeScript & Tailwind"
+      },
+      {
+        "value": "SQL & ACID",
+        "label": "Database Architecture",
+        "detail": "PostgreSQL (Neon) & MySQL Schemas"
+      },
+      {
+        "value": "B.Tech CSE",
+        "label": "2025 Graduate",
+        "detail": "CGPA 7.23 / 10 • Kerala, India"
+      }
+    ],
+    "summary": [
+      "I engineer end-to-end web applications that pair resilient Python and Django REST backends with clean, accessible React frontends.",
+      "During my internship as a Full Stack Python Developer at Kompetenzen Technologies, I built MySQL-backed CRUD modules, designed responsive interfaces, and tested REST API pipelines within an agile team."
+    ],
+    "location": "Thiruvananthapuram, Kerala, India",
+    "availability": "Available for Full-Time Software Engineer / Python Full-Stack Roles",
+    "email": "apsarababu77@gmail.com",
+    "phone": "+91 90376 80752",
+    "linkedin": "https://www.linkedin.com/in/apsara-rb59794280",
+    "github": "https://github.com/apsara-dev",
+    "resume": "/Apsara_R_Resume.pdf"
+  },
+  "stackHighlights": [
+    "Python",
+    "Django REST Framework",
+    "PostgreSQL",
+    "MySQL",
+    "React.js",
+    "TypeScript"
+  ],
+  "architecture": {
+    "headline": "System Architecture & Engineering Standards",
+    "subheadline": "Core backend and full-stack design principles applied across production deployments.",
+    "pillars": [
+      {
+        "id": "security",
+        "badge": "Authentication & Security",
+        "title": "Stateless JWT & Role-Based Access Control",
+        "description": "Decoupled client-server deployments secured with SimpleJWT access/refresh tokens, automated Axios authorization interceptors, and role-level endpoint guards (Admin vs. Employee scopes).",
+        "tech": ["SimpleJWT", "RBAC Guards", "Axios Interceptors", "CORS Security"]
+      },
+      {
+        "id": "transactions",
+        "badge": "Data Integrity",
+        "title": "Idempotent & Atomic Database Operations",
+        "description": "Bulk write workflows—such as department-wide attendance logging—use Django ORM's update_or_create batching and composite unique constraints to eliminate duplicate record anomalies.",
+        "tech": ["Django ORM", "update_or_create", "Composite Unique Keys", "DRF Serializers"]
+      },
+      {
+        "id": "persistence",
+        "badge": "Database Modeling",
+        "title": "Normalized Relational Schemas",
+        "description": "Structured relational data models in PostgreSQL and MySQL enforcing strict ForeignKey and OneToOne constraints, user-isolated queryset filtering, and optimized query lookups.",
+        "tech": ["PostgreSQL (Neon)", "MySQL", "OneToOne & ForeignKey", "Schema Design"]
+      },
+      {
+        "id": "ml-pipeline",
+        "badge": "Applied Machine Learning",
+        "title": "Acoustic DSP & BiLSTM Neural Pipeline",
+        "description": "Audio signals are preprocessed into Mel-Frequency Cepstral Coefficients (MFCCs) using Librosa and classified through a Bidirectional LSTM network in TensorFlow.",
+        "tech": ["TensorFlow", "BiLSTM", "Librosa MFCC", "Python"]
+      }
+    ],
+    "blueprints": [
+      {
+        "id": "erp-flow",
+        "name": "Full-Stack REST & RBAC Request Pipeline",
+        "summary": "End-to-end request lifecycle connecting a React client (Vercel) to a Django REST API (Render) and PostgreSQL (Neon).",
+        "nodes": [
+          {
+            "step": "01 / Client",
+            "title": "React + Axios Interceptor",
+            "detail": "Attaches Bearer JWT automatically and routes users to role-specific workspaces."
+          },
+          {
+            "step": "02 / API Gateway",
+            "title": "Django REST + SimpleJWT",
+            "detail": "Validates token signatures, resolves UserProfile roles, and enforces endpoint permissions."
+          },
+          {
+            "step": "03 / Service Layer",
+            "title": "Serializers & Batch ORM",
+            "detail": "Validates payloads and executes atomic create/update operations via Django ORM."
+          },
+          {
+            "step": "04 / Database",
+            "title": "PostgreSQL / MySQL",
+            "detail": "Enforces relational integrity, unique constraints, and persistent transaction storage."
+          }
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "employee-attendance-system",
+      "name": "Employee Attendance & HR Management System",
+      "kind": "Full-Stack ERP • Django REST Framework, React & PostgreSQL",
+      "featured": true,
+      "metrics": "Bulk Attendance Engine • Stateless JWT & RBAC • Auto Employee ID",
+      "problem": "Organizations managing daily attendance manually face slow one-by-one data entry, duplicate attendance records on the same date, and disconnected employee login accounts.",
+      "solution": "Built a role-based HR and attendance system using Django REST Framework and React. Engineered a Fast Bulk Attendance module to mark or update an entire department in one click, paired with Admin-only user provisioning and an Employee Self-Service Portal.",
+      "architectureHighlight": "SimpleJWT authentication with Axios interceptors, OneToOne UserProfile-to-Employee linking, and idempotent Attendance.objects.update_or_create batch processing on Neon PostgreSQL.",
+      "contribution": [
+        "Engineered the bulk attendance REST API and interactive React sheet for one-click department-wide Present/Absent/Late logging",
+        "Implemented deterministic Employee ID generation (Company Code + 4 digits + name prefix) with live preview and backend fallback",
+        "Built Admin-only user registration (/api/register/) linking authentication credentials directly to employee records",
+        "Developed the Employee Self-Service dashboard for viewing personal attendance metrics and submitting leave applications"
+      ],
+      "outcome": "Deployed in production on Vercel (React frontend), Render (Django REST API), and Neon Serverless PostgreSQL.",
+      "tech": [
+        "Python",
+        "Django 5",
+        "Django REST Framework",
+        "SimpleJWT",
+        "PostgreSQL",
+        "React",
+        "Vite"
+      ],
+      "demo": "https://employee-attendance-system-drab.vercel.app",
+      "code": "https://github.com/apsara-dev/employee-attendance-system"
+    },
+    {
+      "id": "personal-expense-tracker",
+      "name": "Personal Expense & Financial Tracker",
+      "kind": "Full-Stack Web Application • React & Django REST API",
+      "featured": true,
+      "metrics": "JWT Protected Ledger • Category Analytics • Cloud Deployed",
+      "problem": "Individuals need a secure, structured web interface to record daily expenses, categorize transactions, and review monthly spending patterns across devices.",
+      "solution": "Developed a full-stack financial ledger combining a responsive React.js dashboard with a Django REST backend, JWT authentication, and per-user data isolation.",
+      "architectureHighlight": "Enforces per-user queryset filtering at the API view layer so authenticated users can only access or modify their own financial records.",
+      "contribution": [
+        "Built the full-stack application end-to-end connecting a React.js frontend with a Django REST API backend",
+        "Implemented stateless JWT login and protected route guards to secure personal financial data",
+        "Designed RESTful CRUD endpoints for expense logging, category filtering, and summary aggregation",
+        "Created an interactive dashboard for visualizing transaction history and spending distribution"
+      ],
+      "outcome": "Live production deployment hosted on Vercel with source code available on GitHub.",
+      "tech": [
+        "React.js",
+        "Python",
+        "Django",
+        "Django REST Framework",
+        "JWT",
+        "MySQL"
+      ],
+      "demo": "https://expense-tracker-frontend-one-chi.vercel.app/",
+      "code": "https://github.com/apsara-dev/expense-tracker-frontend"
+    },
+    {
+      "id": "bird-species-audio-classification",
+      "name": "Bird Species Classification via Audio Analysis",
+      "kind": "Deep Learning & Signal Processing • TensorFlow & Librosa",
+      "featured": true,
+      "metrics": "85% Classification Accuracy • MFCC Feature Extraction • BiLSTM Network",
+      "problem": "Visual identification of bird species in dense habitats is unreliable compared to acoustic monitoring of their calls.",
+      "solution": "Developed an audio classification pipeline that extracts Mel-Frequency Cepstral Coefficients (MFCCs) from raw recordings using Librosa and classifies species calls with a Bidirectional LSTM (BiLSTM) neural network.",
+      "architectureHighlight": "Transforms raw audio waveforms into normalized spectral feature tensors processed sequentially by Bidirectional LSTM layers.",
+      "contribution": [
+        "Designed and trained the Bidirectional LSTM (BiLSTM) model in TensorFlow for sequential audio classification",
+        "Built the audio preprocessing pipeline using Librosa for noise trimming and MFCC spectral extraction",
+        "Evaluated model accuracy and tuned dropout regularization across multi-species audio datasets"
+      ],
+      "outcome": "Achieved 85% validation accuracy across recorded bird call datasets.",
+      "tech": [
+        "Python",
+        "TensorFlow",
+        "BiLSTM",
+        "Librosa",
+        "NumPy",
+        "Scikit-Learn"
+      ],
+      "demo": "",
+      "code": "https://github.com/apsara-dev"
+    }
+  ],
+  "experience": [
+    {
+      "id": "kompetenzen-technologies",
+      "role": "Full Stack Python Developer Intern",
+      "company": "Kompetenzen Technologies",
+      "place": "Thiruvananthapuram, Kerala",
+      "period": "June 2025 – April 2026",
+      "type": "Full-Stack Development",
+      "tech": ["Python", "Django", "MySQL", "JavaScript", "HTML5 & CSS3", "REST APIs"],
+      "points": [
+        "Developed responsive full-stack web modules using Python, Django, HTML5, CSS3, and JavaScript, improving page responsiveness and cross-device usability.",
+        "Implemented relational CRUD operations and integrated normalized MySQL database schemas with Django backend views.",
+        "Tested, debugged, and validated REST endpoints and web workflows using Postman and structured debugging practices.",
+        "Collaborated with team members using Git version control and MVC/MVT architectural patterns to deliver features on schedule."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "group": "Backend & API Development",
+      "description": "Stateless REST APIs, authentication workflows, and server-side business logic.",
+      "items": [
+        "Python",
+        "Django",
+        "Django REST Framework",
+        "SimpleJWT & RBAC",
+        "RESTful API Design",
+        "MVC / MVT Architecture",
+        "CRUD & Batch Operations"
+      ]
+    },
+    {
+      "group": "Databases & Persistence",
+      "description": "Relational schema modeling, data integrity constraints, and SQL querying.",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "SQLite",
+        "Relational Schema Design",
+        "Django ORM",
+        "Query Optimization"
+      ]
+    },
+    {
+      "group": "Frontend Development",
+      "description": "Responsive single-page interfaces and modern component architectures.",
+      "items": [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "JavaScript (ES6+)",
+        "Tailwind CSS",
+        "HTML5 & CSS3",
+        "Bootstrap"
+      ]
+    },
+    {
+      "group": "Machine Learning & Developer Tools",
+      "description": "Deep learning audio analysis, version control, and cloud deployment.",
+      "items": [
+        "TensorFlow",
+        "BiLSTM",
+        "Librosa",
+        "Git & GitHub",
+        "Postman",
+        "Render & Vercel",
+        "VS Code"
+      ]
+    }
+  ],
+  "githubRepos": [
+    {
+      "name": "employee-attendance-system",
+      "fullName": "apsara-dev/employee-attendance-system",
+      "description": "Full-stack HR and Attendance Management system built with Django REST Framework, SimpleJWT, PostgreSQL, and React.",
+      "language": "Python • JavaScript",
+      "Url": "https://github.com/apsara-dev/employee-attendance-system",
+      "demoUrl": "https://employee-attendance-system-drab.vercel.app",
+      "highlights": ["Django REST + React", "Bulk Attendance API", "JWT Auth"]
+    },
+    {
+      "name": "expense-tracker-frontend",
+      "fullName": "apsara-dev/expense-tracker-frontend",
+      "description": "Personal finance and expense tracking web application featuring a React dashboard and Django REST backend.",
+      "language": "JavaScript • React",
+      "Url": "https://github.com/apsara-dev/expense-tracker-frontend",
+      "demoUrl": "https://expense-tracker-frontend-one-chi.vercel.app/",
+      "highlights": ["JWT Authentication", "REST CRUD", "Vercel Deployment"]
+    },
+    {
+      "name": "apsara-r-portfolio",
+      "fullName": "apsara-dev/apsara-r-portfolio",
+      "description": "Personal software engineering portfolio built with Next.js, TypeScript, and Tailwind CSS.",
+      "language": "TypeScript • Next.js",
+      "Url": "https://github.com/apsara-dev/apsara-r-portfolio",
+      "demoUrl": "https://apsara-r-portfolio.vercel.app/",
+      "highlights": ["Next.js", "TypeScript", "Tailwind CSS"]
+    }
+  ],
+  "education": [
+    {
+      "title": "B.Tech in Computer Science & Engineering",
+      "school": "Vidya Academy of Science and Technology, Technical Campus, Kilimanoor",
+      "period": "2021 – 2025",
+      "detail": "CGPA: 7.23 / 10"
+    },
+    {
+      "title": "Higher Secondary Education",
+      "school": "Govt HSS, Kilimanoor",
+      "period": "2021",
+      "detail": "86%"
+    },
+    {
+      "title": "Secondary Education",
+      "school": "Govt HSS Nagaroor Nedumparambu",
+      "period": "2019",
+      "detail": "98%"
+    }
+  ]
+}

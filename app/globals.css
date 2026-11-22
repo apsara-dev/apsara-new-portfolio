@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 247 249 248;
+  --ink: 15 23 42;
+  --muted: 71 85 105;
+  --line: 203 213 225;
+  --accent: 15 118 110;
+  --panel: 238 242 241;
+}
+.dark {
+  --bg: 10 15 24;
+  --ink: 241 245 249;
+  --muted: 148 163 184;
+  --line: 30 41 59;
+  --accent: 45 212 191;
+  --panel: 17 24 39;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  @apply bg-bg font-sans text-ink antialiased selection:bg-accent/20 selection:text-ink;
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--accent));
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Exact A4 Full-Page Print Styles */
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+  body * {
+    visibility: hidden;
+  }
+  #ats-resume-sheet,
+  #ats-resume-sheet * {
+    visibility: visible;
+  }
+  #ats-resume-sheet {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 210mm !important;
+    min-height: 297mm !important;
+    height: 297mm !important;
+    max-width: 210mm !important;
+    margin: 0 !important;
+    padding: 13mm 15mm !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    overflow: hidden !important;
+  }
+}
